@@ -1,0 +1,41 @@
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+    dependencies {
+        // classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:4.2.0-beta06'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.38.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+ext {
+    buildToolsVersion = '30.0.3'
+    compileSdkVersion = 30
+    maxSdkVersion = 30
+    minSdkVersion = 21
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    targetSdkVersion = 30
+
+    // Checker dependencies.
+    // run checker with `assembleCheckTypes`
+    checkerFrameworkVersion = '3.11.0'
+    checkerQualAndroid = "org.checkerframework:checker-qual-android:${checkerFrameworkVersion}"
+    checkerQual = "org.checkerframework:checker-qual:${checkerFrameworkVersion}"
+    checker = "org.checkerframework:checker:${checkerFrameworkVersion}"
+    errorproneJavac = 'com.google.errorprone:javac:9+181-r4173-1'
+}

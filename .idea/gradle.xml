@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/either2" />
+            <option value="$PROJECT_DIR$/either3" />
+            <option value="$PROJECT_DIR$/either4" />
+            <option value="$PROJECT_DIR$/either5" />
+            <option value="$PROJECT_DIR$/either6" />
+            <option value="$PROJECT_DIR$/either7" />
+            <option value="$PROJECT_DIR$/emptyeither2" />
+            <option value="$PROJECT_DIR$/emptyeither3" />
+            <option value="$PROJECT_DIR$/emptyeither4" />
+            <option value="$PROJECT_DIR$/emptyeither5" />
+            <option value="$PROJECT_DIR$/emptyeither6" />
+            <option value="$PROJECT_DIR$/emptyeither7" />
+            <option value="$PROJECT_DIR$/functional" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

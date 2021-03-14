@@ -1,0 +1,40 @@
+plugins {
+    id 'java-library'
+    // Checker Framework pluggable type-checking
+    id 'org.checkerframework' version '0.5.17'
+}
+
+apply plugin: 'org.checkerframework'
+
+checkerFramework {
+    checkers = [
+            'org.checkerframework.checker.nullness.NullnessChecker',
+    ]
+    skipCheckerFramework = Boolean.valueOf(System.getProperty('rocksSkipCheckerFramework', 'true'))
+}
+
+dependencies {
+    api project(':functional')
+
+    api 'com.google.code.findbugs:jsr305:3.0.2'
+
+    testImplementation 'junit:junit:4.13.2'
+
+    // Checker
+    compileOnly rootProject.checkerQual
+    testCompileOnly rootProject.checkerQual
+    checkerFramework rootProject.checker
+}
+
+java {
+    sourceCompatibility = rootProject.sourceCompatibility
+    targetCompatibility = rootProject.targetCompatibility
+}
+
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.forkOptions.jvmArgs += [
+            '-Xms1g',
+            '-Xmx8g',
+    ]
+}

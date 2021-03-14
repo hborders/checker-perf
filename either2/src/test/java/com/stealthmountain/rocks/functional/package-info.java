@@ -1,0 +1,4 @@
+@EverythingIsNonNullByDefault
+package com.stealthmountain.rocks.functional;
+
+import com.stealthmountain.rocks.annotation.EverythingIsNonNullByDefault;
